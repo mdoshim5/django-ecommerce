@@ -1,0 +1,24 @@
+{%extends 'master.html'%}
+
+{%block body%}
+<div class="container" xmlns="http://www.w3.org/1999/html">
+    <div class="col my-4">
+        <h2>Enter Address & Other Details:</h2>
+       <form action="{% url 'checkout' %}" method="post">
+            {% csrf_token %}
+            <!-- Other form fields -->
+                <input type="text" name="name" placeholder="name">
+                <input type="text" name="address" placeholder="Address">
+                <input type="email" name="email" placeholder="Email">
+
+            <button type="submit">Proceed to Pay</button>
+        </form>
+
+
+
+    </div>
+</div>
+
+
+{%endblock%}
+
